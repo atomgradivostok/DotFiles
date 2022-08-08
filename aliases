@@ -1,0 +1,112 @@
+## Additional Aliases
+
+#alias lsa="ls -a"
+#alias lla="ls -la"
+alias ls="exa --icons"
+alias lls="exa -l --icons"
+alias lla="exa -la --icons"
+alias lsa="exa -a --icons"
+alias v="vim"
+alias nv="nvim"
+alias mc="micro"
+alias una="uname -a"
+alias nf="neofetch"
+alias cnf="clear
+	  neofetch"
+alias f="fish"
+alias z="zsh"
+alias s="sudo"
+alias d="doas"
+alias lb="lsblk"
+alias lf="lsblk -f"
+alias c="clear"
+alias e="exit"
+alias cmt="cmatrix -a"
+alias bt="bashtop"
+
+# ¬ Pacman Aliases
+
+alias pms="sudo pacman -S"
+alias pmqs="sudo pacman -Qs"
+alias syu="sudo pacman -Syyu"
+alias syyu="sudo pacman -Syyyuu"
+alias pmr="sudo pacman -Rcc"
+alias pmrns="sudo pacman -Rns"
+alias pmcc="sudo pacman -Scc"
+alias lvim="/home/noend/.local/bin/lvim"
+alias lv="/home/noend/.local/bin/lvim"
+alias rg="ranger"
+alias tm="tmux"
+alias pmsy="sudo pacman -Sy"
+
+# ¬ Yay (AUR)
+
+alias ys="yay -S"
+alias y="yay"
+alias yc="yay -Sccc"
+alias yr="yay -Rcc"
+alias ysyu="yay -Syuuu"
+alias yyy="yay -Syyyy"
+
+## Neofetch
+
+#neofetch
+
+# ¬ lolcat neofetch
+
+#neofetch | lolcat
+
+## -- Figlet Screen -- And some additional aliases too (I mean! Why the fuck not?)
+
+#figlet 'DWM GOES BRRR!!!'
+
+alias cfg="clear
+figlet 'DWM GOES BRRR!!!'"
+alias rg="ranger"
+alias csr="clear
+          scrot"
+
+alias b="bash"
+alias mci="sudo make clean install"
+alias plx="pulsemixer"
+
+# Suckless Software personal default home config (Change it if dirs are switched)
+alias dwmconf="cd ~/.config/dwm && vim config.h"
+alias slstatusconf="cd ~/.config/slstatus && vim config.h"
+alias sxconf="cd ~/.config/sxhkd && vim sxhkdrc"
+
+# --
+
+alias conf="cd ~/.config && rg"
+alias aliasconf="vim ~/.bashrc && vim ~/.config/fish/config.fish && vim ~/.zshrc"
+alias wmd="~/.local/share/gem/ruby/3.0.0/bin/wayback_machine_downloader"
+alias clock="tty-clock -sc"
+alias sysinfo="inxi -Fxz"
+alias ht="htop"
+alias f="find . -name"
+alias kernel="sudo vim /etc/mkinitcpio.conf"
+alias fg="figlet"
+alias fgc="clear
+          figlet"
+alias sv="sudo vim"
+alias cpf="clear ; pfetch"
+alias mi="sudo make install"
+alias netfresh="sh ~/Scripts/network-refresh.sh"
+alias qnametest="sh ~/Scripts/qnametest.sh"
+alias aqnametest="~/Scripts/adv-qnametest.sh"
+alias session="~/./Desktop/session-desktop-linux-x86_64-1.8.6.AppImage"
+
+# -- nf --ascii_distro artix
+
+figlet "iT JuSt wErKs!" | lolcat
+
+# -- Upgrading Grub
+alias grubupdate="sudo grub-mkconfig -o /boot/grub/grub.cfg"
+alias grubedit="sudo vim /etc/default/grub"
+
+alias torbrw="sh -c '"$HOME/Desktop/TorBrowser/Browser/start-tor-browser" --detach || ([ !  -x "$HOME/Desktop/TorBrowser/Browser/start-tor-browser" ] && "$(dirname "$*")"/Browser/start-tor-browser --detach)' dummy %k"
+
+alias nfa="neofetch --ascii_distro artix"
+alias cnfa="clear
+neofetch --ascii_distro artix"
+alias sht="sudo htop"
