@@ -1,0 +1,28 @@
+#!/bin/sh
+
+# This file runs when a DM logs you into a graphical session.
+# If you use startx/xinit like a Chad, this file will also be sourced.
+
+#xrandr --dpi 96		# Set DPI. User may want to use a larger number for larger screens.
+setbg &			# set the background with the `setbg` script
+#xrdb ${XDG_CONFIG_HOME:-$HOME/.config}/x11/xresources & xrdbpid=$!	# Uncomment to use Xresources colors/settings on startup
+remaps &		# run the remaps script, switching caps/esc and more; check it for more info
+
+autostart="sxhkd mpd dunst unclutter pulseaudio"
+
+#nitrogen --restore
+#exec $HOME/custom-bars/cuts/scripts/pywal.sh ~/Pictures/Pics/distopian\ wallpapers/111111000110100111100011011010101000111.jpg &
+exec $HOME/custom-bars/cuts/scripts/pywal.sh ~/Pictures/Pics/distopian\ wallpapers/100000000011010101010000001111.jpg &
+exec slstatus &
+#/home/noend/dwmbar/dwm_bar.sh &
+exec lxpolkit &
+exec picom --config ~/.config/picom/picom.conf --experimental-backends &
+
+#sudo rc-service connmand restart
+
+for program in $autostart; do
+	pidof -s "$program" || setsid -f "$program"
+done >/dev/null 2>&1
+
+# Ensure that xrdb has finished running before moving on to start the WM/DE.
+[ -n "$xrdbpid" ] && wait "$xrdbpid"
