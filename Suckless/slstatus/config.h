@@ -70,7 +70,7 @@ static const struct arg args[] = {
     { netspeed_rx, "|  %sB/s  ",           "eth0" },
     { cpu_freq, "|  %s  ",           NULL	      },
     { ram_used, "|  %s  ",           NULL	      },
-    { run_command, "| %2s  ",           "curl -s wttr.in/Bagnasco?format=1" },
+    { run_command, "| %2s  ",           "curl -s wttr.in/$LOCATION?format=1" },
     { run_command, "| %s  ",           "$HOME/.config/scripts/sl_audio.sh" },
     { disk_used, "|  %s/",           "/" },
     { disk_total, "%s ",           "/" },
