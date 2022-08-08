@@ -1,0 +1,106 @@
+env:
+  TERM: xterm-256color
+
+window:
+  padding:
+    x: 6
+    y: 6
+
+  title: Alacritty
+  class:
+    instance: Alacritty
+    general: Alacritty
+
+scrolling:
+  history: 100000
+
+#;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_;;#
+
+# Font configuration
+font:
+  normal:
+    family: Ubuntu 
+    style: Regular
+
+#  bold:
+#    family: Iosevka Nerd Font
+#    style: Bold
+
+#  italic:
+#    family: Iosevka Nerd Font
+#    style: Italic
+
+#  bold_italic:
+#    family: Iosevka Nerd
+
+  # Point size
+  size: 12
+
+  offset:
+    x: 0
+    y: 0
+
+draw_bold_text_with_bright_colors: true
+
+# Blue Matrix
+# Source: https://github.com/mbadolato/iTerm2-Color-Schemes/blob/master/alacritty/Blue%20Matrix.yml
+# Colors (Blue Matrix)
+
+colors:
+  bright:
+    black: '#686868'
+    blue: '#6871ff'
+    cyan: '#60fdff'
+    green: '#5ffa68'
+    magenta: '#d682ec'
+    red: '#ff6e67'
+    white: '#ffffff'
+    yellow: '#fffc67'
+  cursor:
+    cursor: '#76ff9f'
+    text: '#ffffff'
+  normal:
+    black: '#101116'
+    blue: '#00b0ff'
+    cyan: '#76c1ff'
+    green: '#00ff9c'
+    magenta: '#d57bff'
+    red: '#ff5680'
+    white: '#c7c7c7'
+    yellow: '#fffc58'
+  primary:
+    background: '#101116'
+    foreground: '#00a2ff'
+  selection:
+    background: '#c1deff'
+    text: '#000000'
+
+# -- Background colors
+
+## background_opacity: 0.8 
+## window.opacity: 0.1
+## window: opacity: 0.9
+
+window:
+  opacity: 0.8
+
+cursor:
+  unfocused_hollow: false
+
+key_bindings:
+    # (Windows, Linux, and BSD only)
+  - { key: V,        mods: Control|Shift, action: Paste            }
+  - { key: C,        mods: Control|Shift, action: Copy             }
+  - { key: Insert,   mods: Shift,         action: PasteSelection   }
+  - { key: U,        mods: Control|Shift, action: ResetFontSize    }
+  - { key: K,        mods: Control|Shift, action: IncreaseFontSize }
+  - { key: K,        mods: Control|Shift, action: IncreaseFontSize }
+  - { key: J,        mods: Control|Shift, action: DecreaseFontSize }
+  - { key: Paste,                    action: Paste                            }
+  - { key: Copy,                     action: Copy                             }
+  - { key: L,         mods: Control, action: ClearLogNotice                   }
+  - { key: L,         mods: Control, chars: "\x0c"                            }
+  - { key: PageUp,    mods: Shift,   action: ScrollPageUp,   mode: ~Alt       }
+  - { key: PageDown,  mods: Shift,   action: ScrollPageDown, mode: ~Alt       }
+  - { key: Home,      mods: Shift,   action: ScrollToTop,    mode: ~Alt       }
+  - { key: End,       mods: Shift,   action: ScrollToBottom, mode: ~Alt       }

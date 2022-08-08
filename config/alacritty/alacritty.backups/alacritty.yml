@@ -1,0 +1,89 @@
+env:
+  TERM: xterm-256color
+
+window:
+  padding:
+    x: 6
+    y: 6
+
+  title: Alacritty
+  class:
+    instance: Alacritty
+    general: Alacritty
+
+scrolling:
+  history: 100000
+
+#;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_;;#
+
+# Font configuration
+
+font:
+
+  # Point size
+  size: 9
+
+  offset:
+    x: 0
+    y: 0
+
+draw_bold_text_with_bright_colors: true
+
+colors:
+  # Default colors
+  primary:
+    background: '#0f111b'
+    foreground: '#eeffff'
+
+  cursor:
+    text: '#0f111b'
+    cursor: '#ff5370'
+
+  selection:
+    text: '#ff5370'
+    background: '#292d3e'
+
+ # Normal colors
+  normal:
+    black:   '#1c1f24'
+    red:     '#f78c6c'
+    green:   '#c3e88d'
+    yellow:  '#ecbe7b'
+    blue:    '#82aaff'
+    magenta: '#c792ea'
+    cyan:    '#89ddff'
+    white:   '#bfc7d5'
+
+  # Bright colors
+  bright:
+    black:   '#5b6268'
+    red:     '#ff5370'
+    green:   '#98be65'
+    yellow:  '#ffcb6b'
+    blue:    '#5fafff'
+    magenta: '#d787d7'
+    cyan:    '#5fd7ff'
+    white:   '#bcbcbc'
+
+background_opacity: 0.9
+
+cursor:
+  unfocused_hollow: false
+
+key_bindings:
+    # (Windows, Linux, and BSD only)
+  - { key: V,        mods: Control|Shift, action: Paste            }
+  - { key: C,        mods: Control|Shift, action: Copy             }
+  - { key: Insert,   mods: Shift,         action: PasteSelection   }
+  - { key: U,        mods: Control|Shift, action: ResetFontSize    }
+  - { key: K,        mods: Control|Shift, action: IncreaseFontSize }
+  - { key: K,        mods: Control|Shift, action: IncreaseFontSize }
+  - { key: J,        mods: Control|Shift, action: DecreaseFontSize }
+  - { key: Paste,                    action: Paste                            }
+  - { key: Copy,                     action: Copy                             }
+  - { key: L,         mods: Control, action: ClearLogNotice                   }
+  - { key: L,         mods: Control, chars: "\x0c"                            }
+  - { key: PageUp,    mods: Shift,   action: ScrollPageUp,   mode: ~Alt       }
+  - { key: PageDown,  mods: Shift,   action: ScrollPageDown, mode: ~Alt       }
+  - { key: Home,      mods: Shift,   action: ScrollToTop,    mode: ~Alt       }
+  - { key: End,       mods: Shift,   action: ScrollToBottom, mode: ~Alt       }

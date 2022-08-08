@@ -1,0 +1,88 @@
+## -- DWM
+
+# lockscreen
+
+#ctrl + shift + z
+mod4 + shift + l
+	betterlockscreen -u $HOME/Pictures/Wallpapers/Backgrounds/wallpaperflare.com_wallpaper.jpg -l dimblur
+
+# - termite
+
+ctrl + Return
+	termite
+
+mod4 + KP_Enter
+		st
+
+# alacritty terminal
+
+#mod4 + shift + Return
+ctrl + shift + Return
+    alacritty
+
+# - screenshot
+
+Print 
+#F12
+   scrot ~/Pictures/Screenshots/%Y-%m-%d-%T-screenshot.png
+
+# delayed screenshot
+mod4 + Print
+    scrot -d 3 ~/Pictures/Screenshots/%Y-%m-%d-%T-screenshot.png
+
+# - Filemgr (thunar) (nautilus)
+
+alt + t
+    thunar
+
+alt + n
+    nautilus
+
+# network manager
+
+alt + shift + n
+       exec nm-connection-editor
+
+# pulsemixer
+
+alt + x
+    termite -e pulsemixer
+
+# pulseaudio (pavucontrol)
+#
+ctrl + shift + x
+        pavucontrol
+
+# powermenu
+mod4 + shift + e
+    sh ~/./.config/polybar/cuts/scripts/powermenu.sh
+
+# htop
+alt + shift + q
+    termite -e htop
+
+# tty-clock
+alt + c
+    alacritty -e tty-clock -sc
+
+# launcher
+mod4 + d
+    sh ~/./.config/polybar/cuts/scripts/launcher.sh
+
+# -- Badass Retro Terminal
+#
+alt + Return
+    cool-retro-term
+
+# - rofi
+mod4 + shift + r
+    rofi -show run
+
+# xfce4-terminal
+#mod4 + KP_Enter
+#    xfce4-terminal
+#
+
+# NeoVim
+ctrl + i
+    termite -e nvim  
